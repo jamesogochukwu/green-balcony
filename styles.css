@@ -1,0 +1,52 @@
+/* Original Green Balcony styles. Fluid percentage sizing and float/clear
+   follow Murach's HTML and CSS, 5th ed., Chapter 8 fluid application.
+   No framework, embedded styles, or inline styles. */
+* { box-sizing: border-box; }
+html { background-color: #FAF6EC; scroll-behavior: smooth; }
+body { width: 96%; max-width: 1200px; margin: 1.5em auto; color: #26372A; background-color: #FFFFFF; font: 100%/1.65 Verdana, Arial, sans-serif; border: 1px solid #C9D9C4; }
+h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; line-height: 1.2; }
+h1 { font-size: 2.6em; margin: 0; }
+h2 { font-size: 1.8em; margin: 0 0 .65em; }
+h3 { font-size: 1.35em; margin: .4em 0; color: #7A5230; }
+p { margin: 0 0 1em; }
+a { color: #2F6B3F; }
+a:focus-visible { outline: 3px solid #7A5230; outline-offset: 4px; }
+header { padding: 2em 4%; background-color: #E6F1E4; color: #2F6B3F; }
+header p { margin: .4em 0 0; }
+.logo { float: left; font-size: 3.2em; line-height: 1.3; margin-right: 3%; }
+header::after, nav ul::after, .category-row::after, .featured::after { content: ''; display: block; clear: both; }
+nav { background-color: #2F6B3F; }
+nav ul { list-style: none; padding: 0; margin: 0; }
+nav li { float: left; width: 20%; }
+nav a { display: block; padding: .95em .3em; text-align: center; text-decoration: none; color: #FFFFFF; font-weight: bold; }
+nav a:hover, nav a:focus, nav a[aria-current='page'] { background-color: #214D2D; text-decoration: underline; text-underline-offset: .3em; }
+main { padding: 2em 4%; }
+.hero { margin-bottom: 2.5em; background-color: #FAF6EC; }
+.hero > img { display: block; width: 100%; height: auto; }
+.welcome { padding: 1.8em 5%; max-width: 900px; }
+.eyebrow { color: #7A5230; font-size: .8em; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .7em; }
+.button { display: inline-block; background-color: #2F6B3F; color: #FFFFFF; padding: .65em 1.3em; text-decoration: none; font-weight: bold; }
+.button:hover { background-color: #214D2D; }
+#categories { margin-bottom: 2.5em; scroll-margin-top: 1em; }
+.category { float: left; width: 23.5%; margin-right: 2%; padding: 1.3em 2%; text-align: center; background-color: #E6F1E4; text-decoration: none; border: 1px solid #C9D9C4; }
+.category:last-child { margin-right: 0; }
+.category > span { display: block; font-size: 2em; line-height: 1.4; }
+.category p { font-size: .8em; margin: .6em 0 0; }
+.category:hover { background-color: #D5E6D1; }
+.featured { padding: 1.8em 4%; background-color: #FAF6EC; border-top: 3px solid #2F6B3F; }
+.tip-copy { float: left; width: 64%; }
+.featured img { float: right; width: 30%; height: auto; margin-top: 1em; }
+footer { clear: both; padding: 1.5em 4%; background-color: #E6F1E4; text-align: center; border-top: 1px solid #C9D9C4; font-size: .8em; }
+footer p { margin-bottom: .6em; }
+.skip-link { position: absolute; left: -10000px; }
+.skip-link:focus { left: 2%; top: .3em; background-color: #FFFFFF; padding: .5em; z-index: 1; }
+@media only screen and (max-width: 700px) {
+ body { font-size: 90%; margin: .6em auto; }
+ h1 { font-size: 2em; }
+ nav a { font-size: .8em; }
+ .category { width: 49%; margin-right: 2%; margin-bottom: 1em; }
+ .category:nth-child(2n) { margin-right: 0; }
+ .tip-copy { width: 100%; float: none; }
+ .featured img { width: 100%; float: none; margin-top: .5em; }
+}
+@media only screen and (max-width: 380px) { nav a { font-size: .7em; } header p { font-size: .8em; } }
